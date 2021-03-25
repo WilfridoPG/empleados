@@ -1,0 +1,260 @@
+:root {
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont: "Raleway", sans-serif;
+  --textFont: "Roboto", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: var(--textFont);
+}
+
+h1,
+h2 {
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 0 0 4rem 0;
+  text-align: center;
+  color: var(--gris2);
+}
+h1 span {
+  font-weight: 400;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--gris2);
+}
+
+/** BOTONES **/
+.btn {
+  margin-top: 2rem;
+  font-family: var(--headingFont);
+  padding: 1.5rem;
+  font-size: 1.4;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn-primario {
+  background-color: var(--gris2);
+  color: var(--blanco);
+}
+.btn-primario:hover {
+  background: var(--gris3);
+}
+.btn-secundario {
+  background-color: var(--gris1);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-submit:hover {
+  background-color: var(--gris2);
+}
+.btn-blank {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .contenedor-app {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .seccion-principal {
+    flex: 1;
+  }
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gris2);
+  padding: 4rem;
+}
+.nombre-usuario {
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin: 0;
+}
+.nombre-usuario span {
+  font-weight: 900;
+}
+
+/** Formulario crear y editar tareas **/
+.formulario {
+  background-color: var(--gris3);
+  padding: 4rem;
+}
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contenedor-input {
+  display: flex;
+}
+.contenedor-input label {
+  margin-bottom: 1rem;
+  color: var(--blanco);
+}
+.input-text {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+/** TAREAS LISTADO **/
+.contenedor-tareas {
+  padding: 4rem;
+}
+
+.listado-tareas {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tarea {
+  display: grid;
+  grid-template-columns: 15% 30% 20% 25% 20%;
+  background-color: var(--blanco);
+  padding: 0.5rem 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.tarea .acciones .btn:first-of-type {
+  margin-right: 1rem;
+}
+.tarea p {
+  font-size: 1.6rem;
+  flex: 1;
+  padding-right: 2rem;
+}
+.empleado .btn {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border-radius: 0;
+  margin: 0;
+}
+
+.contenedor-form {
+  padding: 5rem 3rem;
+  max-width: 500px;
+  width: 95%;
+  background-color: var(--blanco);
+  border-radius: 1rem;
+}
+
+.campo-form {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.campo-form:last-of-type {
+  margin: 0;
+}
+.empleado {
+  display: grid;
+  grid-template-columns: 16% 30% 20% 25% 15%;
+  align-items: center;
+}
+.empleado:hover {
+  background-color: gray !important;
+}
+.btn-agregar-empleado:hover {
+  transition-duration: 2s;
+
+  background-color: green !important;
+  color: white !important;
+}
+
+.btn-editar-empleado:hover {
+  transition-duration: 2s;
+
+  background-color: green !important;
+  color: white !important;
+}
+
+#video {
+  border: 1px solid black;
+  width: 320px;
+  height: 240px;
+}
+
+#photo {
+  border: 1px solid black;
+  width: 320px;
+  height: 240px;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  width: 340px;
+  display: inline-block;
+}
+
+#startbutton {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 36px;
+  padding: 5px;
+  background-color: #6a67ce;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.contentarea {
+  font-size: 16px;
+  font-family: Arial;
+  text-align: center;
+}
